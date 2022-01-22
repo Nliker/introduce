@@ -10,3 +10,19 @@ html {
 body {
   background-color: darkslateblue;
 }
+main article {
+  height: 500px;
+  width: 100%;
+}
+main article#one {
+  background-color: rgb(186, 112, 235);
+}
+main article#two {
+  background-color: rgb(133, 68, 175);
+}
+main article#three {
+  background-color: rgb(186, 112, 235);
+}
+main article#four {
+  background-color: rgb(63, 38, 80);
+}
