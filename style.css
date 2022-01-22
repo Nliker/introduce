@@ -8,7 +8,7 @@ html {
   overflow-y: scroll;
 }
 body {
-  background-color: darkslateblue;
+  background-color: rgb(202, 82, 192);
   width: 90%;
   margin: 0 auto;
 }
@@ -26,9 +26,12 @@ ol,
 ul {
   list-style: none;
 }
-
+nav {
+  position: sticky;
+  top: 0px;
+}
 nav ul {
-  background-color: rgb(217, 192, 240);
+  background-color: rgb(248, 220, 246);
   display: flex;
   flex-direction: row;
 }
@@ -37,11 +40,23 @@ nav ul li {
   text-align: center;
 }
 nav ul li a {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
   display: inline-block;
   width: 80%;
-  padding: 20px 0;
+  margin: 5px 0;
+  padding: 15px 0;
+  transition: background-color 0.5s linear;
+  border-radius: 10px;
 }
-
+nav ul li a:hover {
+  background-color: deeppink;
+}
+header div.header_wrap div p {
+  margin-top: 30px;
+  margin-left: 3px;
+}
 header div.header_wrap {
   display: flex;
   width: 100%;
@@ -55,7 +70,7 @@ header div.header_wrap div.picture {
   background-image: url('introduce.jpg');
 }
 header div.header_wrap div.info ul {
-  background-color: cornsilk;
+  background-color: rgb(234, 238, 241);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,24 +88,77 @@ header div.header_wrap div.info ul div.icons {
 }
 
 main article {
-  height: 500px;
+  height: 400px;
   width: 100%;
 }
 
 main article h2 {
   text-align: center;
-  height: 10%;
+  padding-bottom: 20px;
+  height: 40px;
 }
 main article div.wordContainer {
   display: flex;
-  height: 90%;
+  height: 360px;
   width: 100%;
 }
 main article div.keyword {
-  background-color: crimson;
+  background-color: rgb(250, 167, 239);
   width: 200px;
 }
 main article div.words {
-  background-color: rgb(184, 119, 132);
+  background-color: rgb(255, 124, 233);
   flex: 1 1 0;
+}
+main article div ul {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+main article div.words {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main article div.keyword ul {
+  font-size: 25px;
+  font-family: 'Do Hyeon', sans-serif;
+}
+main article div.words p {
+  font-size: 20px;
+}
+main article#four {
+  height: 350px;
+}
+main article#four div div.hobby {
+  flex: 1;
+  text-align: center;
+  margin: 20px;
+  background-color: rgb(252, 208, 246);
+}
+main article#four div div.hobby img {
+  margin: 10px 0;
+}
+main article#four div div.hobby p {
+  margin: 10px 0;
+}
+
+#dynamic {
+  display: inline-block;
+  position: relative;
+}
+#dynamic::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 4px;
+  height: 100%;
+  background-color: rgb(80, 116, 136);
+}
+#dynamic.active::after {
+  display: none;
 }
