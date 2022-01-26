@@ -127,6 +127,7 @@ main article div.keyword ul {
   font-family: 'Do Hyeon', sans-serif;
 }
 main article div.words p {
+  overflow: auto;
   font-size: 20px;
 }
 main article#four {
